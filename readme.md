@@ -2,7 +2,7 @@
 
 ![IST Logo](http://tecnico.ulisboa.pt/img/tecnico.png)
 
-Simple modules that map twitter dataset stored in CSV to easy to use arrays and gives you a small resume.
+Simple modules that map twitter dataset stored in CSV to easy to use arrays. A small resume of the dataset is also computed.
 
 ## How to use
 
@@ -17,7 +17,7 @@ include DatasetMapper
 @default_data = :with_stem
 ~~~
 
-Get the array if tweets in the dataset:
+Get the array of tweets in the dataset:
 ~~~ruby
 tweets       # => array full of tweets
 tweets.first # => 'paintbrush work ipad sensubrushman' 
