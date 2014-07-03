@@ -36,9 +36,19 @@ puts inspect_dataset_stats() # =>
 ~~~
 
 ## Dataset Format
-This code was used with other gems not yet published ( sorry about that :p ), used to manipulate the initial dataset in json. It expects a dataset with following structure.
+This code was used with other gems in order to manipulate the initial dataset in json. It expects a dataset with following structure:
 
 ![Dataset Files](https://photos-3.dropbox.com/t/0/AAAqwKhNWq4aAAArxp8ZfxgeUvFx6NJojuXBsZvcvJaNfg/12/3217572/png/1024x768/3/1404396000/0/2/Screen%20Shot%202014-07-03%20at%2013.08.24.png/SGXIz-csRI3gIRcBk-L6o3vpuVjRivfFxd3xhZfLvzU)
+
+
+
+| Dataset File  | Use             |
+|:------------- |:---------------:| 
+| tweets01_aaaa      | json file with tweets captured by INESC-id | 
+| tweets01\_aaaa\_english\_trimed.csv      | CSV file containing tweets coma separated. Ex: **200740321783578624,ReRoc_Rochi_KTB,females kno yal jus sit nigas job supose** |
+| tweets01\_aaaa\_english\_trimed\_with_stem.csv      | Same as above but with stemming applied. Ex: **200740321783578624,ReRoc_Rochi_KTB,femal kno yal jus sit niga job supos**        | 
+| *.wcount | file corresponding to the file with same finished with .csv, with the words that appear are summed. Ex (love apeard 4253 times ): **love,4253** | 
+| data\_set\_words | all the words that appear in the dataset |
 
 
 ## License
