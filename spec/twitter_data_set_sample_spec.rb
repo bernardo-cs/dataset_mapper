@@ -41,7 +41,6 @@ describe DatasetMapper do
 
   describe '#inspect_dataset_stats' do
     it "prints dataset information" do
-      binding.pry
       inspect_dataset_stats = inspect_dataset_stats()
       inspect_dataset_stats.should match("total number of tweets")
       inspect_dataset_stats.should match("number of tweets in selected words")
