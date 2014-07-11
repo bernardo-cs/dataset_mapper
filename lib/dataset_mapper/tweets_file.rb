@@ -9,6 +9,8 @@ module DatasetMapper
     end
 
     def tweets_with_id
+      puts "im here"
+      p @base_file
       tweets_file.read.split("\n").map{ |l| [l.split(',')[0].to_i, l.split(',')[2] ]}
     end
 

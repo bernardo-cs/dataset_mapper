@@ -4,12 +4,14 @@ require_relative './dataset_mapper/words_file.rb'
 require_relative './dataset_mapper/tweets_file.rb'
 require_relative './dataset_mapper/tweets_words_file.rb'
 require_relative './dataset_mapper/json_file.rb'
+require_relative './dataset_mapper/tweets_json_connection.rb'
 
 module DatasetMapper
   include WordsFile
   include TweetsFile
   include TweetsWordsFile
   include JsonFile
+  include TweetsJsonConnection
 
   # Total number of words from the biggest dataset,
   # and offset where words seemed more relevant
@@ -49,7 +51,6 @@ module DatasetMapper
     "percentil used,\t\t" + get_percentil.to_s+ "\n" +
     "words used,\t\t" + selected_words.to_s+ "\n"
   end
-
 end
 
 
