@@ -3,11 +3,13 @@
 require_relative './dataset_mapper/words_file.rb'
 require_relative './dataset_mapper/tweets_file.rb'
 require_relative './dataset_mapper/tweets_words_file.rb'
+require_relative './dataset_mapper/json_file.rb'
 
 module DatasetMapper
   include WordsFile
   include TweetsFile
   include TweetsWordsFile
+  include JsonFile
 
   # Total number of words from the biggest dataset,
   # and offset where words seemed more relevant
