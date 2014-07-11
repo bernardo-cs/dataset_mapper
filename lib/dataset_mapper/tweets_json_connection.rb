@@ -6,5 +6,9 @@ module DatasetMapper
     def get_id_from_stemmed_text text
       tweets_with_id.detect{ |t| t.last == text }.first
     end
+
+    def convert_stemmed_text_to_text text
+      get_text_from(get_id_from_stemmed_text( text ))
+    end
   end
 end
