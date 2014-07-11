@@ -9,7 +9,7 @@ module DatasetMapper
     end
 
     def json_tweets max_number = nil
-      @json_tweets ||= read_file( max_number ).lines.map{ | l | JSON.parse(l) }
+      @json_tweets ||= read_file( max_number ).lines.map{ | l | puts "parsing..."; JSON.parse(l)  }
     end
 
     def get_text_from id
