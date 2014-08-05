@@ -7,6 +7,8 @@ module DatasetMapper
     # @percentil can be explicitlly declared in order to
     # overwrite automatic calculations
 
+    # @number_of_words will force the number of selected words
+    # to the choosen number
     def words_number
       words_file.count
     end
