@@ -23,7 +23,7 @@ tweets       # => array full of tweets
 tweets.first # => 'paintbrush work ipad sensubrushman' 
 ~~~
 
-Get the dataset stats:
+Get the dataset stats with default values:
 ~~~ruby
 puts inspect_dataset_stats() # =>
 # total number of tweets,                 87558
@@ -31,9 +31,20 @@ puts inspect_dataset_stats() # =>
 # number of words in the dataset,         50880
 # number of words used in sample,         18
 # number of word ocurrences in sample,    463
-# percentil used,         0.94
+# percentil used,                         0.94
 # words used,             ["recogn", "bracket", "basket", "mar", "length", "initi", "dye", "eras", "tradit", "liverpol", "delici", "advantag", "robot", "potus", "belief", "volum", "hok", "thirstythursday"]
 ~~~
+
+It is possible to overwrite the default value of words to be found in the dataset.
+The offset percentil where words start to be choosen can also be changed.
+
+~~~ruby
+selected_words.size()  #=> whatever number it was before
+@percentil              = 0.5
+@number_of_words        = 250
+selected_words.size()  #=> 250
+~~~
+
 
 ## Dataset Format
 This code was used with other gems in order to manipulate the initial dataset in json. It expects a dataset with following structure:

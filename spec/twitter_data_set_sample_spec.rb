@@ -4,7 +4,7 @@ include DatasetMapper
 
 describe DatasetMapper do
   before :each do
-    @dataset_path = '/src/thesis/inesc_data_set_sample/decompressed' 
+    @dataset_path = '/src/thesis/inesc_data_set_sample/decompressed'
     @base_file = 'tweets01_aaaa'
     @default_data = :with_stem
   end
@@ -35,7 +35,7 @@ describe DatasetMapper do
 
   describe '#tweets_file' do
     it "returns the file with the tweets" do
-      tweets_file.path.should eql('/src/thesis/inesc_data_set_sample/decompressed/tweets01_aaaa_english_trimed_with_stem.csv')  
+      tweets_file.path.should eql('/src/thesis/inesc_data_set_sample/decompressed/tweets01_aaaa_english_trimed_with_stem.csv')
     end
   end
 
@@ -67,7 +67,17 @@ describe DatasetMapper do
     it "returns array of tweets in selected words" do
       tweets_in_selected_words.size.should eql(425)
     end
-  end 
+    it "should return a diferent array of tweets if the percentil chages" do
+      @percentil = 0.5
+      @number_of_words = 20
+      selected_words.size.should                eql 20
+      binding.pry
+    end
+    it "should return a diferent array of tweets if the percentil chages" do
+      @percentil = 0.5
+      tweets_in_selected_words.size.should eql(425)
+    end
+  end
 
  describe '#regexp_builder' do
    it "creates a regx to find the words in tweets" do
@@ -80,5 +90,5 @@ describe DatasetMapper do
       tweets_with_id.first.should eq([197701817864421376, "paintbrush work ipad sensubrushman"])
       tweets_with_id.last.should eq([200740321783578624, "femal kno yal jus sit amp amp niga job supos"])
     end
-  end 
+  end
 end
